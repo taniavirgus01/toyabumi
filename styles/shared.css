@@ -1,0 +1,248 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f5faf9;
+  --surface: #ffffff;
+  --surface-soft: #f3f8f7;
+
+  --text: #0f2a33;
+  --text-strong: #0a1f26;
+  --muted: #64758a;
+  --muted-light: #9aa8b5;
+
+  --line: #e4ecee;
+  --line-soft: #eff4f5;
+
+  --primary: #0e8f99;
+  --primary-deep: #0a6d7b;
+  --primary-soft: #e6f4f5;
+
+  --accent: #7bbf3d;
+  --accent-deep: #5ea42a;
+  --accent-soft: #eef7e3;
+
+  --footer: #0a2430;
+  --footer-line: rgba(255, 255, 255, 0.1);
+
+  --shadow-xs: 0 1px 2px rgba(10, 35, 48, 0.04);
+  --shadow-sm: 0 6px 18px rgba(10, 35, 48, 0.06);
+  --shadow-md: 0 18px 40px rgba(10, 35, 48, 0.08);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+
+  --container: min(1200px, calc(100vw - 48px));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 100px;
+}
+
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.section-heading {
+  text-align: center;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.skiptranslate iframe.skiptranslate {
+  display: none !important;
+}
+
+.page-shell {
+  overflow-x: clip;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+}
+
+.icon-sm {
+  width: 18px;
+  height: 18px;
+}
+
+.accent {
+  color: var(--accent-deep);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.75em 1em;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.button-primary {
+  color: #ffffff;
+  background: var(--primary);
+  box-shadow: 0 10px 24px rgba(14, 143, 153, 0.22);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: var(--primary-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(14, 143, 153, 0.28);
+}
+
+.button-ghost {
+  color: var(--text);
+  background: #ffffff;
+  border: 1.5px solid var(--line);
+}
+
+.button-ghost:hover,
+.button-ghost:focus-visible {
+  border-color: var(--primary);
+  color: var(--primary-deep);
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  padding: 11px 26px;
+  border: 1.5px solid var(--primary);
+  color: var(--primary-deep);
+  background: #ffffff;
+  border-radius: 999px;
+  font-weight: 700;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.button-outline:hover,
+.button-outline:focus-visible {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+.section-alt {
+  background: var(--bg-soft);
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 56px;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--primary-soft);
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-deep);
+  margin-bottom: 18px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  color: var(--text-strong);
+}
+
+.section-lead {
+  max-width: 62ch;
+  margin: 20px auto 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
