@@ -7,7 +7,7 @@ const currentYear = new Date().getFullYear();
 
 export const translations = {
   id: {
-    pageTitle: "Toya Bumi Bersih | Sistem Pengolahan Air",
+    pageTitle: "Toya Bumi Bersih - Sistem Pengolahan Air",
     pageDescription: "PT Toya Bumi Bersih menyediakan solusi pengolahan air bersih untuk rumah tangga, komersial, dan industri di Indonesia.",
     "nav.about": "Tentang",
     "nav.services": "Layanan",
@@ -227,7 +227,7 @@ export const translations = {
   },
 
   en: {
-    pageTitle: "Toya Bumi Bersih | Water Treatment System",
+    pageTitle: "Toya Bumi Bersih - Water Treatment System",
     pageDescription: "PT Toya Bumi Bersih provides clean water treatment solutions for residential, commercial, and industrial needs across Indonesia.",
     "nav.about": "About",
     "nav.services": "Services",

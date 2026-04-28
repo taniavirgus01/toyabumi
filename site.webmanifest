@@ -1,7 +1,7 @@
 {
-  "name": "Toya Bumi Bersih",
   "short_name": "Toya Bumi Bersih",
-  "description": "PT Toya Bumi Bersih menyediakan solusi pengolahan air bersih untuk rumah tangga, komersial, dan industri di Indonesia.",
+  "name": "Toya Bumi Bersih - Sistem Pengolahan Air",
+  "description": "PT Toya Bumi Bersih memberikan solusi pengolahan air bersih untuk rumah tangga, komersial, dan industri di Indonesia.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
